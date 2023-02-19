@@ -1,0 +1,20 @@
+@font-face {
+	font-family: iransansdnwebbold;
+	font-style: normal;
+	font-weight: bold;
+	src: url('../fonts/eot/iransansdnwebbold.eot');
+	src: url('../fonts/eot/iransansdnwebbold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff2/iransansdnwebbold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/woff/iransansdnwebbold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/ttf/iransansdnwebbold.ttf') format('truetype');
+}
+@font-face {
+	font-family: iransansdnweb;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/eot/iransansdnweb.eot');
+	src: url('../fonts/eot/iransansdnweb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('../fonts/woff2/iransansdnweb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+		 url('../fonts/woff/iransansdnweb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('../fonts/ttf/iransansdnwebregular.ttf') format('truetype');
+}

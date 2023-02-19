@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    html {
+        height: 100%;
+        font-family: fantasy;
+    }
+
+    body {
+        height: 100%;
+        background-color: rgb(172, 37, 37);
+    }
+
+    .container {
+        width: 60%;
+        height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .products {
+        height: 100%;
+        flex: 2;
+        overflow-y: scroll;
+    }
+
+    .cart {
+        height: 100%;
+        flex: 1;
+        overflow-y: scroll;
+    }
+
+    .cart h2,
+    .products h2 {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .seprator {
+        height: 100%;
+        border-right: 1px dashed rgb(214, 214, 214);
+    }
+
+    .cart .items .item,
+    .products .items .item {
+        display: flex;
+        flex-direction: row;
+        padding: 25px;
+    }
+
+    .cart .items .item img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-right: 10px;
+    }
+
+    .cart .items .item {
+        border-bottom: 1px dashed rgb(214, 214, 214);
+    }
+
+    .cart .items .item:last-of-type {
+        border-bottom: none;
+    }
+
+    .products .items .item .thumbnail img {
+        width: 100%;
+        border-radius: 20px;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        object-fit: contain;
+    }
+
+    .products .items .item .thumbnail {
+        position: relative;
+        width: 400px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .products .items .item .thumbnail:hover .add-to-cart {
+        opacity: 1;
+    }
+
+    .products .items .item .thumbnail .add-to-cart {
+        border-radius: 20px;
+        background-color: rgb(172, 37, 37, 0.8);
+        color: white;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        z-index: 10;
+        opacity: 0;
+        text-align: center;
+        line-height: 2;
+        font-size: 83px;
+        transition: ease all .5s;
+    }
+
+    .products .items .item .details p {
+        font-size: 16px;
+        color: rgb(112, 112, 112);
+    }
+
+    .products .items .item {
+        border-bottom: 1px dashed rgb(214, 214, 214);
+    }
+
+    .products .items .item:last-of-type {
+        border-bottom: none
+    }
+
+    .products .price {
+        color: green !important;
+    }
+</style>
+
+<body>
+
+
+    <div class="container">
+        <div class="products">
+            <h2>Products</h2>
+            <div class="items">
+                <div class="item">
+                    <div class="thumbnail">
+                        <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4&q=90&m=6&h=270&w=270&b=%23FFFFFFFF&f=jpg&o=f&aim=true"
+                            alt="">
+                        <div class="add-to-cart">+</div>
+                    </div>
+                    <div class="details">
+                        <h3>Surface Pro 2TB</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloremque nam, perspiciatis
+                            a veniam praesentium neque possimus...</p>
+                        <p class="price">4000$</p>
+                    </div>
+                </div>
+
+
+                <div class="item">
+                    <div class="thumbnail">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71l9h2wBq4L._AC_SX679_.jpg" alt="">
+                        <div class="add-to-cart">+</div>
+                    </div>
+                    <div class="details">
+                        <h3>Asus Vivobook S14</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloremque nam, perspiciatis
+                            a veniam praesentium neque possimus...</p>
+                        <p class="price">1200$</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="thumbnail">
+                        <img src="https://brain-images-ssl.cdn.dixons.com/4/7/10206074/l_10206074_002.jpg" alt="">
+                        <div class="add-to-cart">+</div>
+                    </div>
+                    <div class="details">
+                        <h3>Asus Rog Zephyrus</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloremque nam, perspiciatis
+                            a veniam praesentium neque possimus...</p>
+                        <p class="price">4900$</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="thumbnail">
+                        <img src="https://media.s-bol.com/R1zNVrJOBkQV/550x417.jpg" alt="">
+                        <div class="add-to-cart">+</div>
+                    </div>
+                    <div class="details">
+                        <h3>Asus Rog GV301</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloremque nam, perspiciatis
+                            a veniam praesentium neque possimus...</p>
+                        <p class="price">1599$</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="thumbnail">
+                        <img src="https://imgaz2.staticbg.com/thumb/large/oaupload/banggood/images/94/AA/3c9c5bc5-a980-4cc1-b620-b8d8808654b3.jpg.webp"
+                            alt="">
+                        <div class="add-to-cart">+</div>
+                    </div>
+                    <div class="details">
+                        <h3>Xiaomi Mi Laptop Pro 15,6</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis doloremque nam, perspiciatis
+                            a veniam praesentium neque possimus...</p>
+                        <p class="price">1020$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="seprator"></div>
+
+        <div class="cart">
+            <h2>Cart</h2>
+            <div class="items">
+
+                <!-- cart item and should be add -->
+                <div class="item">
+                    <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4tjV5?ver=eab4&q=90&m=6&h=270&w=270&b=%23FFFFFFFF&f=jpg&o=f&aim=true"
+                        alt="">
+                    <div class="details">
+                        <h3>Surface Pro 2TB</h3>
+                        <h5>4000$</h5>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".add-to-cart").click(function () { 
+
+
+                // You should call APIs for dynamic cart here.
+
+                
+                let productImg = $(this).siblings("img").attr("src");
+                let productTitle = $(this).parents(".thumbnail").siblings(".details").find("h3").text();
+                let productPrice = $(this).parents(".thumbnail").siblings(".details").find(".price").text();
+
+
+                //first method
+
+                /*First method to create the new item. Uncomment if you want to use this method.
+                
+                let newCartItem = '<div class="item"><img src="' +  productImg + '" alt=""><div class="details"><h3>' + productTitle +  '</h3><h5>'+ productPrice +'</h5></div></div>';
+
+                $(".cart .items").append(newCartItem);
+                */
+
+                // -------------------
+
+                //Second method. this is the standard way.
+
+                let itemDiv = document.createElement("div");
+                itemDiv.classList.add("item");
+
+                let itemImg = document.createElement("img");
+                itemImg.setAttribute("src",productImg);
+
+                let detailsDiv = document.createElement("div");
+                detailsDiv.classList.add("details");
+
+
+                let h3Title = document.createElement("h3");
+                let h3TextNode = document.createTextNode(productTitle);
+                h3Title.appendChild(h3TextNode);
+
+                let h5Price = document.createElement("h5");
+                let h5TextNode = document.createTextNode(productPrice);
+                h5Price.appendChild(h5TextNode);
+
+
+                detailsDiv.appendChild(h3Title);
+                detailsDiv.appendChild(h5Price);
+
+                itemDiv.appendChild(itemImg);
+                itemDiv.appendChild(detailsDiv);
+
+                $(".cart .items").append(itemDiv)
+                
+             });
+        });
+    </script>
+</body>
+
+</html>

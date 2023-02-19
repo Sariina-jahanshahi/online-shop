@@ -1,0 +1,452 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(212, 212, 212);;
+    font-family: lato, 'iransansdnwebbold' !important;;
+    direction: rtl;
+}
+#slider{
+    width: 60%;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 0 7px #333;
+}
+
+#slider img{
+    width: 100%;
+}
+
+.slide{
+    display: none;
+    animation: fade 5s ;
+}
+
+.slide.active{
+    display: block;
+}
+.text{
+    color: #fff;
+    /* position: absolute; */
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+.prev, .next{
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+    /* right: 78%; */
+    transform: translate(0,-50%);
+}
+
+.prev{
+    
+    right: 300px;
+}
+.next{
+  left:300px;
+}
+#dots{
+    text-align: center;
+}
+.dot{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+}
+.dot.active{
+        background-color: rgb(139, 87, 73);
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+  
+  .ax {
+     height: 100vh;
+  }
+  .ulimag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  label{
+    color: rgb(184, 104, 184);
+  }
+  .image{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5px 10px;
+  }
+  .image .img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+  }
+  .image:hover{
+    box-shadow: 0 10px 14px -10px ;
+  }
+  footer{
+    height: 30vh;
+    width: 100%;
+    background-color:  rgb(47, 46, 46);
+  }
+  .sss{
+    max-width:100%;
+    margin: 0 auto;
+    padding: 3px 0;
+    align-items: center;
+  }
+  
+  
+  nav{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3px 0;
+  }
+  nav ul{
+    text-align: center;
+    background: linear-gradient(90deg, rgba(251, 105, 105, 0.1) 0%,
+    rgba(226, 97, 97, 0.2) 25% rgba(238, 102, 102, 0.2) 75% rgba(255,255,255,0.1) 100%) ;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1), inset 0 0 1px rgba(225, 149, 149, 0.6);
+    padding: 0 20px;
+    border-radius: 10px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+  }
+  .sabett nav ul  {
+    /* list-style: none; */
+    background-color: rgb(237, 181, 181);
+    position: fixed;
+    /* top: 0; */
+    width: 100%; 
+  }
+  .sabet nav ul  {
+    /* list-style: none; */
+    background-color: rgb(211, 208, 208);
+    position: fixed;
+    top: 50px;
+    width: 55%; 
+  }
+  .sabet nav ul ul {
+    text-align: center;
+    padding: 0 20px;
+    list-style: none;
+    background-color: rgb(254, 252, 253);
+    position:absolute;
+    top: 49px;
+    width: 750px;
+    
+  }
+ 
+  .sabet nav ul ul ul{
+    position: absolute;
+  }
+  nav ul :after{
+    content:"";
+    clear: both;
+    display: block;
+  }
+  nav ul ul {
+    display: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    
+  }
+  nav ul li{
+    display: inline-block;
+    /* float: right; */
+    position: relative;
+    font-weight: bold;
+  }
+ 
+  nav ul li:hover{
+    background: #dafcfc96;
+  }
+  nav ul li:hover>ul{
+    display: block;
+  }
+  nav ul li a{
+    padding: 15px 32px;
+    color: rgb(251, 251, 251);
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+  }
+  nav ul li a:hover{
+    color:rgba(7, 52, 87, 0.7) ;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 25px rgba(0,0,0,0.1), inset 0 0 1px rgba(225, 149, 149, 0.6);
+  }
+  /* .sabet nav ul ul li{
+    float: none;
+    
+  } */
+  .sabet nav ul ul li a{
+    padding: 15px;
+    color: #fff;
+  }
+
+ 
+  .sabett nav ul li {
+    float: right;
+  }
+  .sabet nav ul li {
+    float: right;
+  }
+  .sabett nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+ .sabet nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+ 
+ 
+  .content{
+    position: absolute;
+    width: 800px;
+    height: 450px;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  .btn{
+    position: absolute;
+    top:  50%;
+    transform: translate(-50%);
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+    background-color: #ddd;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: .3s;
+  }
+  .btn:hover{
+    box-shadow: 0 10px 14px -10px ;
+    transition: 1s;
+  }
+  /* *{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+  } */
+  body{
+    background: rgb(212, 212, 212);
+    direction: rtl;
+    /* font-family: 'iransansdnwebbold' !important; */
+  }
+  .wrapper{
+    height: 50vh;
+    background: #16384c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card{
+    width: 350px;
+    height: 265px;
+    background: #fff;
+    padding: 20px 15px;
+    margin: 30px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card .imbox{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    top: -60px;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 10;
+  }
+  
+  .card .imgbox img{
+    width: 100%;
+    height: 100%;
+  
+  }
+  .card:hover{height: 400px;}
+  .content{
+    margin-top: -140px;
+    padding: 0 15px;
+    color: #111;
+    text-align: justify;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -30px;
+    transition-delay:0.3s ;
+  }
+  
+  .content p{padding-top: 10px;}
+ 
+  .axs{
+    /* position: absolute; */
+    height: 200px;
+    width:  300px;
+    position: relative;
+
+  }
+ h1{
+      color: rgb(246, 92, 182);
+      animation: show 4s infinite;
+    }
+    
+    @keyframes show{
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+p{
+  direction: ltr;
+  color: rgb(119, 206, 240);
+    margin: 20px 50px;
+}
+h2{
+  font:bold;
+}
+
+/* cart */
+
+.products-container{
+ max-width: 650px;
+ justify-content: space-around;
+ margin: 0 auto;
+ margin-top: 50px;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ margin-top: 50px;
+ padding-bottom: 100px;
+}
+.product ion-icon,.quantity ion-icon{
+     font-size: 40px;
+     color: blue;
+     margin-left: 10px;
+     margin-right: 10px;
+     cursor: pointer;
+}
+
+.product-header{
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid rgb(244, 123, 123);
+  margin: 0 auto;
+}
+
+.product-title{
+  width: 45%;
+  margin-right: 20px;
+}
+.price{
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+.quantity{
+  width: 30%;
+  display: flex;
+  border-bottom: 1px solid rgb(244, 123, 123);
+  align-items: center;
+
+}
+.total{
+  width: 50%;
+  display: flex;
+  border-bottom: 1px solid rgb(244, 123, 123);
+  align-items: center;
+}
+.product{
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(244, 123, 123);
+  align-items: center;
+  padding: 10px 0;
+  margin-left: 450px;
+}
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product ion-icon{
+  cursor: pointer;
+}
+.products img{
+  width: 75px;
+}
+.basketTotalContainer{
+   display: flex;
+   width: 100%;
+   justify-content: flex-end;
+   padding: 10px 0;
+}
+.basketTotalTitle{
+  width: 30%;
+}
+.basketTotal{
+  width: 10%;
+}
